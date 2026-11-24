@@ -1,0 +1,671 @@
+{
+  "format": "rest-client-local/collection",
+  "version": 1,
+  "id": "b8soaswqn5vh",
+  "name": "tonyshop",
+  "variables": {},
+  "folders": [
+    {
+      "id": "zlzofymldtcr",
+      "name": "auth"
+    },
+    {
+      "id": "tdys7eankgch",
+      "name": "users"
+    },
+    {
+      "id": "i7vns19r63ne",
+      "name": "category"
+    },
+    {
+      "id": "0821aj6spgzo",
+      "name": "product"
+    },
+    {
+      "id": "bvfz5sr694oh",
+      "name": "cart"
+    },
+    {
+      "id": "sxbomtcls5lx",
+      "name": "orders"
+    },
+    {
+      "id": "95g0la0s14hq",
+      "name": "payment"
+    },
+    {
+      "id": "hul51dzy9ieq",
+      "name": "product review"
+    },
+    {
+      "id": "xzgb2crqtuj4",
+      "name": "report"
+    }
+  ],
+  "requests": [
+    {
+      "id": "62cq6puvrnv8",
+      "name": "forgot-password",
+      "method": "POST",
+      "url": "localhost:8084/api/auth/forgot-password",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"email\":\"incheolha1650@gmail.com\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "4oft9cc2wp75",
+      "name": "reset-password",
+      "method": "POST",
+      "url": "localhost:8084/api/auth/reset-password",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"code\":\"1J84ZR\",\n\"password\":\"1234\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "43xydqynjk0z",
+      "name": "get-my-account",
+      "method": "GET",
+      "url": "localhost:8084/api/users/me",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6IkNVU1RPTUVSIiwiZXhwIjoxNzk3NjY5ODgyfQ.-OxR2c5frlkvuqnedb_28Ta2Bey8xpYQFQnfTT0iMJY"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": []
+    },
+    {
+      "id": "4bicj5oclka8",
+      "name": "update-profile",
+      "method": "PUT",
+      "url": "localhost:8084/api/users/me",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6IkNVU1RPTUVSIiwiZXhwIjoxNzk3NjY5ODgyfQ.-OxR2c5frlkvuqnedb_28Ta2Bey8xpYQFQnfTT0iMJY"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": []
+    },
+    {
+      "id": "pp6r7r9nrcub",
+      "name": "update-profile copy",
+      "method": "PUT",
+      "url": "localhost:8084/api/users/change-password",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk3ODA0MzE4fQ.xBMaF7iN0Lle_T8NhJUmRarikeznVQlNMgETeD3cYDk"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"oldPassword\":\"123\",\n  \"newPassword\":\"123456\"\n}"
+      },
+      "tests": [],
+      "captures": []
+    },
+    {
+      "id": "6v5vfgwfpa1m",
+      "name": "get-all-users",
+      "method": "GET",
+      "url": "localhost:8084/api/users/all-users",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwicm9sZSI6IkNVU1RPTUVSIiwiZXhwIjoxNzk3NjY5ODgyfQ.-OxR2c5frlkvuqnedb_28Ta2Bey8xpYQFQnfTT0iMJY"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": []
+    },
+    {
+      "id": "s6vs8lrpawkq",
+      "name": "User Register",
+      "method": "POST",
+      "url": "localhost:8084/api/auth/register",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"email\":\"tonyha@gmail.com\",\n\"password\":\"123456\",\n\"name\":\"Tony Ha\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "ii1pfg90uan1",
+      "name": "login-admin",
+      "method": "POST",
+      "url": "localhost:8084/api/auth/login",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": ""
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"email\":\"incheolha@gmail.com\",\n\"password\":\"1234\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "rhtcdso3ulvr",
+      "name": "upload-avartar",
+      "method": "POST",
+      "url": "localhost:8084/api/users/upload-avartar",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "json",
+        "text": ""
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "tdys7eankgch"
+    },
+    {
+      "id": "tly6ie9exsbf",
+      "name": "New Request",
+      "method": "GET",
+      "url": "",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "1opluexsc0zy",
+      "name": "New Request",
+      "method": "GET",
+      "url": "",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "tdys7eankgch"
+    },
+    {
+      "id": "pd6ydba0an89",
+      "name": "New Request",
+      "method": "GET",
+      "url": "",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "zlzofymldtcr"
+    },
+    {
+      "id": "ol0jd9537e8t",
+      "name": "add-category",
+      "method": "POST",
+      "url": "localhost:8084/api/categories",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"name\":\"Fashion\",\n  \"description\":\"Fashoin category\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "i7vns19r63ne"
+    },
+    {
+      "id": "0uzsgcg5bcfj",
+      "name": "get all categories",
+      "method": "GET",
+      "url": "localhost:8084/api/categories",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"name\":\"Books\",\n  \"description\":\"books category\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "i7vns19r63ne"
+    },
+    {
+      "id": "835k64zpbabu",
+      "name": "edit-category",
+      "method": "PUT",
+      "url": "localhost:8084/api/categories",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"id\":1,\n  \"name\":\"Books edited\",\n  \"description\":\"books category\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "i7vns19r63ne"
+    },
+    {
+      "id": "m2osc091n7mv",
+      "name": "delete category",
+      "method": "DELETE",
+      "url": "localhost:8084/api/categories",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"id\":1,\n  \"name\":\"Books edited\",\n  \"description\":\"books category\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "i7vns19r63ne"
+    },
+    {
+      "id": "u94jllxupmq9",
+      "name": "get all products",
+      "method": "GET",
+      "url": "localhost:8084/api/products",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "0821aj6spgzo"
+    },
+    {
+      "id": "texb03xb1qlf",
+      "name": "get products details",
+      "method": "GET",
+      "url": "localhost:8084/api/products/2",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "none"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "0821aj6spgzo"
+    },
+    {
+      "id": "fb0fpwxud53r",
+      "name": "Add Porducts",
+      "method": "POST",
+      "url": "",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "0821aj6spgzo"
+    },
+    {
+      "id": "wwlvlqbnuhc9",
+      "name": "update-products",
+      "method": "PUT",
+      "url": "localhost:8084/api/products/update",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "form",
+        "form": [
+          {
+            "name": "name",
+            "value": "Happy "
+          },
+          {
+            "name": "price",
+            "value": "450"
+          },
+          {
+            "name": "id",
+            "value": "1"
+          }
+        ]
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "0821aj6spgzo"
+    },
+    {
+      "id": "qf6us0vkys9v",
+      "name": "delete products",
+      "method": "DELETE",
+      "url": "localhost:8084/api/products/delete/30303",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "0821aj6spgzo"
+    },
+    {
+      "id": "mb60o2vz98l0",
+      "name": "add my cart",
+      "method": "POST",
+      "url": "localhost:8084/api/cart/add",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"productId\":2,\n\"quantity\":1\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "bvfz5sr694oh"
+    },
+    {
+      "id": "tve3ka9uj443",
+      "name": "decrement cart quantity",
+      "method": "POST",
+      "url": "localhost:8084/api/cart/decrement/2",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "bvfz5sr694oh"
+    },
+    {
+      "id": "qxfo3b0gnqz3",
+      "name": "remove items",
+      "method": "DELETE",
+      "url": "localhost:8084/api/cart/remove/2",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "bvfz5sr694oh"
+    },
+    {
+      "id": "vbqgz6y7rxvo",
+      "name": "clear cart",
+      "method": "DELETE",
+      "url": "localhost:8084/api/cart/clear",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "bvfz5sr694oh"
+    },
+    {
+      "id": "3bmixm1nddqu",
+      "name": "view my cart",
+      "method": "GET",
+      "url": "localhost:8084/api/cart",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDE0OTg0fQ.MVVP60Fks_f7YaGBNvqAchl5o6XlnKHauwu5Xtahol0"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n\"email\":\"incheolha@gmail.com\",\n\"password\":\"1234\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "bvfz5sr694oh"
+    },
+    {
+      "id": "j3o0nfejtbwr",
+      "name": "checkout",
+      "method": "POST",
+      "url": "localhost:8084/api/orders/checkout",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": ""
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "sxbomtcls5lx"
+    },
+    {
+      "id": "lqy4g43pzsru",
+      "name": "my order",
+      "method": "GET",
+      "url": "localhost:8084/api/orders/me",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDYwOTUxfQ.AlT8wzkgNBKRFtwWp0w0TtgcufB-zEFJOfNb4ayAy_A"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "sxbomtcls5lx"
+    },
+    {
+      "id": "nm81e18g24ih",
+      "name": "all order",
+      "method": "GET",
+      "url": "localhost:8084/api/orders/me",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDYwOTUxfQ.AlT8wzkgNBKRFtwWp0w0TtgcufB-zEFJOfNb4ayAy_A"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "sxbomtcls5lx"
+    },
+    {
+      "id": "hnmia9g23rtv",
+      "name": "order status",
+      "method": "PATCH",
+      "url": "localhost:8084/api/orders/1/status",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDYwOTUxfQ.AlT8wzkgNBKRFtwWp0w0TtgcufB-zEFJOfNb4ayAy_A"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"product_id\":2,\n  \"status\":\"delivered\"\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "sxbomtcls5lx"
+    },
+    {
+      "id": "8gqvbby91dzc",
+      "name": "confirm",
+      "method": "GET",
+      "url": "",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "95g0la0s14hq"
+    },
+    {
+      "id": "i5d5fkah9mnq",
+      "name": "create review",
+      "method": "POST",
+      "url": "localhost:8084/api/reviews",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDgyMDE4fQ.MHXE2eeBh5oxardz8VlyDNKZfLVM9FxQa9aC8d0bI9c"
+      },
+      "body": {
+        "type": "json",
+        "text": "{\n  \"productId\":\"2\",\n  \"orderId\":\"1\",\n  \"rating\":\"4\",\n  \"comment\":\"it works well\"\n\n}"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "hul51dzy9ieq"
+    },
+    {
+      "id": "37jo71lsh3ev",
+      "name": "average rating",
+      "method": "GET",
+      "url": "localhost:8084/api/reviews/product/rating/2",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "inherit"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "hul51dzy9ieq"
+    },
+    {
+      "id": "jhgoaushu1gq",
+      "name": "Dashboard",
+      "method": "GET",
+      "url": "localhost:8084/api/reports/dashboard",
+      "params": [],
+      "headers": [],
+      "auth": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3Iiwicm9sZSI6IkFETUlOIiwiZXhwIjoxNzk4MDgyMDE4fQ.MHXE2eeBh5oxardz8VlyDNKZfLVM9FxQa9aC8d0bI9c"
+      },
+      "body": {
+        "type": "none"
+      },
+      "tests": [],
+      "captures": [],
+      "folder": "xzgb2crqtuj4"
+    }
+  ]
+}

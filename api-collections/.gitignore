@@ -1,0 +1,2 @@
+# Secrets for an environment go in <name>.local.json (merged over <name>.json, never committed)
+*.local.json
